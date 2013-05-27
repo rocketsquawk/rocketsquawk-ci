@@ -48,6 +48,7 @@ Veewee::Definition.declare({
     "chef.sh",
     "cleanup-virtualbox.sh",
     "teamcity.sh",
+    "gitlab.sh",
     "cleanup.sh",
     "zerodisk.sh"
   ],
