@@ -11,7 +11,7 @@ Installation
 
 ### As a submodule
 
-* From the root of your cloned veewee repository:
+From the root of your cloned veewee repository:
 
 ```bash
 $ git submodule add -f https://github.com/rocketsquawk/rocketsquawk-ci.git definitions/rocketsquawk-ci
@@ -25,15 +25,15 @@ NOTE: The `-f` switch is required because the veewee project's .gitignore file c
 
 ### The kludgy way
 
-* If you don't want to mess with submodules, this way is for you. Make sure you have [Vagrant][1] and [Veewee][2] installed and functioning.
+If you don't want to mess with submodules, this way is for you. Make sure you have [Vagrant][1] and [Veewee][2] installed and functioning.
 
-* Clone the rocketsquawk-ci repository:
+Clone the rocketsquawk-ci repository:
 
 ```bash
 $ git clone https://github.com/rocketsquawk/rocketsquawk-ci.git
 ```
 
-* Create a `definitions/rocketsquawk-ci` directory in your cloned veewee repository, and copy the RocketSquawk CI file to it:
+Create a `definitions/rocketsquawk-ci` directory in your cloned veewee repository, and copy the RocketSquawk CI file to it:
 
 ```bash
 $ mkdir <your_cloned_veewee_repo>/definitions/rocketsquawk-ci
@@ -50,21 +50,44 @@ $ cp rocketsquawk-ci/* ~/Development/veewee/definitions/rocketsquawk-ci/
 Building
 --------
 
-* In your cloned veewee repository:
+In your cloned veewee repository:
 
 ```bash
 $ veewee vbox build 'rocketsquawk-ci' --workdir=<your_cloned_veewee_repo>
 ```
 
 So, for me:
+
 ```bash
 $ veewee vbox build 'rocketsquawk-ci' --workdir=~/Development/veewee
+```
+
+Using
+-----
+
+Export to a `rocketsquawk-ci.box` file:
+
+```bash
+$ veewee vbox export 'rocketsquawk-ci'
+```
+
+Add the box to Vagrant:
+
+```bash
+$ vagrant box add 'rocketsquawk-ci-x86' 'rocketsquawk-ci.box'
+````
+
+Use the box:
+
+```bash
+$ vagrant init 'rocketsquawk-ci-x86'
+$ vagrant up
+$ vagrant ssh
 ```
 
 TODO
 ----
 
-* Adding as a Vagrant box
 * Post-"installation" instructions: how to start services, etc.
 
 [1]: http://vagrantup.com "Vagrant"
