@@ -1,6 +1,6 @@
 # Install a bunch of pre-reqs
 echo "### Installing a bunch of stuff that GitLab requires ###"
-apt-get -y install libyaml-dev libgdbm-dev libncurses5-dev libffi-dev git-core redis-server checkinstall libxml2-dev libxslt-dev libcurl4-openssl-dev libicu-dev
+apt-get -y install g++ libyaml-dev libgdbm-dev libncurses5-dev libffi-dev git-core redis-server checkinstall libxml2-dev libxslt-dev libcurl4-openssl-dev libicu-dev
 gem install bundler --no-ri --no-rdoc
 
 # Make sure python2 resolves to python
