@@ -33,7 +33,7 @@ Clone the rocketsquawk-ci repository:
 $ git clone https://github.com/rocketsquawk/rocketsquawk-ci.git
 ```
 
-Create a `definitions/rocketsquawk-ci` directory in your cloned veewee repository, and copy the RocketSquawk CI file to it:
+Create a `definitions/rocketsquawk-ci` directory in your cloned veewee repository, and copy the RocketSquawk CI files to it:
 
 ```bash
 $ mkdir <your_cloned_veewee_repo>/definitions/rocketsquawk-ci
